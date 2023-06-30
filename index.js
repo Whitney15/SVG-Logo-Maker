@@ -38,11 +38,25 @@ const questions = [
     },
 ];
 
+// SVG file creation
+function writeToFile(fileName, data) {
+    var item = logoGenerator(data);
+    fs.writeFile(fileName, item, function(error){
+        if (error) {
+            return console.log(error);
+        }
 
+        console.log('Generated logo.svg');
+    });
+}
 
-// class Svg{
-//     constructor(){
-//         this.textElement =''
-//         this.shapeElement = ''
-//     }
-// }
+// initialize app
+function init() {
+    inquirer.createPromptModule(questions).then(function(data) {
+        var fileName = 'logo.svg';
+        writeToFile(fileName, data);
+    });
+}
+
+// call to initialize the SVG logo maker app
+init();
