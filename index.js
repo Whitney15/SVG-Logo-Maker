@@ -3,7 +3,7 @@
 // const to write our file
 const fs = require("fs");
 const inquirer = require("inquirer");
-const logoGenerator = require("./lib/shapes");
+const {Square, Circle, Triangle} = require("./lib/shapes");
 
 // text prompt questions show in Terminal
 const questions = [
@@ -37,6 +37,26 @@ const questions = [
         
     },
 ];
+
+// ????
+class Logo{
+    constructor(){
+        this.textElement = '';
+        this.shapeElement = '';
+    }
+    render(){
+        return `<svg height="200" width="300" xmlns="http://www.w3.org/2000>${this.shape}${this.text}/svg> `;
+    }
+    setTextElement(text,color){
+        if(text.length > 3){
+            throw Error('Please enter up to (3) chacters only!')
+        }
+        this.textElement = `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${color}">${text}</text>`;
+    }
+    setshapeElement(shape){
+        this.shapeElement = shape.render();
+    }
+}
 
 // SVG file creation
 function writeToFile(fileName, data) {
