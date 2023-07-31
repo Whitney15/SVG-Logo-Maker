@@ -28,9 +28,7 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Credit](#credit)
-- [License](#license)
+
 
 ## Installation Requirements
 1. Clone this Respitory
@@ -49,12 +47,7 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 3. Open the cloned repository in Vscode or code editor of choice.
 
-## Usage
-bkcs
+## Video
+https://drive.google.com/file/d/1DJjI6jhXADIVVAth3j5fcr2OnFIRNGeo/view
 
-## Credit
-N/A
-
-## License
-* none
 
